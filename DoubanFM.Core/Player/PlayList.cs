@@ -6,6 +6,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 
 namespace DoubanFM.Core
 {
@@ -49,7 +50,7 @@ namespace DoubanFM.Core
 		{
 			//构造链接
 			Parameters parameters = new Parameters();
-            parameters["app_name"] = "radio_desktop_win";
+            parameters["app_name"] = "radio";
             parameters["version"] = "100";
             parameters["user_id"] = playerState.CurrentUser.UserID;
             parameters["token"] = playerState.CurrentUser.Token;
@@ -82,7 +83,7 @@ namespace DoubanFM.Core
                 parameters["kbps"] = kbps;
             }
 
-            string url = ConnectionBase.ConstructUrlWithParameters("http://www.douban.com/j/app/radio/people", parameters);
+            string url = ConnectionBase.ConstructUrlWithParameters(ConfigurationManager.AppSettings["PlayList.BaseUrl"], parameters);
 
 			//获取列表
 			string json = new ConnectionBase().Get(url, @"application/json, text/javascript, */*; q=0.01", @"http://douban.fm");

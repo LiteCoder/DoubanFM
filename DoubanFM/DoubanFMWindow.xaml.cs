@@ -2116,17 +2116,17 @@ namespace DoubanFM
 
         private void HlPlayed_Click(object sender, RoutedEventArgs e)
         {
-            Core.UrlHelper.OpenLink("http://douban.fm/mine?type=played");
+            Core.UrlHelper.OpenLink("http://douban.fm/mine#!type=played");
         }
 
         private void HlLiked_Click(object sender, RoutedEventArgs e)
         {
-            Core.UrlHelper.OpenLink("http://douban.fm/mine?type=liked");
+            Core.UrlHelper.OpenLink("http://douban.fm/mine#!type=liked");
         }
 
         private void HlBanned_Click(object sender, RoutedEventArgs e)
         {
-            Core.UrlHelper.OpenLink("http://douban.fm/mine?type=banned");
+            Core.UrlHelper.OpenLink("http://douban.fm/mine#!type=banned");
         }
 
         private void NotifyIcon_TrayLeftMouseUp(object sender, RoutedEventArgs e)

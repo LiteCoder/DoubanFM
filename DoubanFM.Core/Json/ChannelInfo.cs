@@ -31,7 +31,7 @@ namespace DoubanFM.Core.Json
         /// <summary>
         /// 公共频道
         /// </summary>
-        [DataMember(Name = "public")]
+        [DataMember(Name = "channels")]
         public Channel[] Public { get; set; }
 
         /// <summary>

@@ -443,7 +443,7 @@ namespace DoubanFM.Core
         private LogOnResult LogOnWithUsername(string username, string password)
         {
             Parameters parameters = new Parameters();
-            parameters["app_name"] = "radio_desktop_win";
+            parameters["app_name"] = "radio";
             parameters["version"] = "100";
             parameters["username"] = username;
             parameters["password"] = password;
@@ -460,7 +460,7 @@ namespace DoubanFM.Core
         private LogOnResult LogOnWithEmail(string email, string password)
         {
             Parameters parameters = new Parameters();
-            parameters["app_name"] = "radio_desktop_win";
+            parameters["app_name"] = "radio";
             parameters["version"] = "100";
             parameters["email"] = email;
             parameters["password"] = password;
@@ -517,7 +517,7 @@ namespace DoubanFM.Core
 	    {
 	        Debug.Assert(!string.IsNullOrEmpty(Settings.User.Token), "!string.IsNullOrEmpty(Settings.User.Token)");
 	        Parameters parameters = new Parameters();
-	        parameters["app_name"] = "radio_desktop_win";
+	        parameters["app_name"] = "radio";
 	        parameters["version"] = "100";
 	        parameters["user_id"] = Settings.User.UserID;
 	        parameters["token"] = Settings.User.Token;
